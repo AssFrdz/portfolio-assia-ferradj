@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+        <link rel="icon" type="image/png" href="logo.png">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="icon" type="image/png+xml" href="assets/logo/logo-black.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="script/script.js" defer></script>
+        <title>Accueil</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="top-bar">
+                    <div class="social-bar">
+                        <a href="https://github.com/AssFrdz"><img src="assets/icon/github.png" alt=""></a>
+                        <a href=""><img src="assets/icon/twitter.png" alt=""></a>
+                    </div>
+                    <img src="assets/icon/bars.svg" alt="" class="phone-element" id="hamburger_button">
+                    <a href="index.html"><img src="assets/logo/logo-black.png" alt="" id="logo-top"></a>
+                    <a href="contact.html"><img src="assets/icon/mail.svg" alt=""></a>
+                </div>
+            <ul>
+                <li><a href="index.html" class="underline">Accueil</a></li>
+                <li><a href="parcours.html">Parcours</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="veille.html">Veille</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="meconnaitre.html">Me connaître</a></li>
+
+                <li class="phone-element"><a href="#"><i class="fa-brands fa-github"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+            </ul>
+            </nav>
+        </header>
+        <main>
+
+            
+           <section>
+            <h1 class="blue-title"><span>Contact</span></h1>
+           </section>
+
+           <section id="contact">
+            <form action="https://formspree.io/f/mldernbn" method="post">
+                <label for="email">Votre Email :</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                <br>
+                <label for="nom">Votre Nom:</label>
+                <input type="text" id="nom" name="nom" placeholder="Nom" required>
+                <br>
+                <label for="prenom">Votre Prénom :</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Prenom" required>
+                <br>
+                <label for="message">Votre Message :</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Votre message ..." required></textarea>
+                <br>
+                <input name="submit" type="submit" value="Envoyer" class="cta-2-blue">
+            </form>
+            
+            
+           </section>
+        
+            
+
+
+        </main>
+        <footer>
+            <div class="plan-site">
+                <h3>Plan</h3>
+                <a href="index.html">Accueil</a>
+                <a href="parcours.html">Parcours</a>
+                <a href="projets.html">Projets</a>
+                <a href="competences.html">Compétences</a>
+                <a href="veille.html">Veille</a>
+                <a href="cv.html">CV</a>
+                <a href="meconnaitre.html">Me connaître</a>
+            </div>
+
+            <div class="copyright">
+                Copyright &copy; Assia Ferradj
+            </div>
+
+            <div class="contact">
+                <h3>Contact</h3>
+                <a href="tel:+33749457843"><i class="fa-solid fa-phone"></i> 07.49.45.78.43</a>
+                <a href="mailto:assia.ferradj.sio@gmail.com"><i class="fa-regular fa-envelope"></i> assia.ferradj.sio@gmail.com</a>
+                <a href="https://github.com/AssFrdz"><i class="fa-brands fa-github"></i> Assfrdz</a>
+                <a href="https://www.linkedin.com/in/assia-ferradj-895758296/"><i class="fa-brands fa-linkedin"></i> Assia Ferradj</a>
+            </div>
+
+        </footer>
+        
+       <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+       <script>
+        let typed =  new Typed ('.auto-typing',{
+            strings: ['étudiante en BTS SIO.', 'développeuse juniore.', 'motivée .'],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true,
+            fadeOut: true,
+            fadeOutClass: 'type-fade-out',
+            fadeOutDelay: 500,
+        });
+       </script>
+    </body>
+</html>
