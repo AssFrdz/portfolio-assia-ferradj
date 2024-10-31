@@ -39,7 +39,7 @@
 
             <section class="som-bloc">
                 <h1 class="blue-title"><span>Parcours</span></h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus laborum vitae nobis, ducimus minima fuga quo eveniet facilis qui veniam repellat itaque mollitia. Veritatis, aliquam expedita. Omnis explicabo eos id.</p>
+                <p>Si on est passionnée d’informatique comme moi, et qu’on apprécie une branche particulière (développement), on se demande naturellement dans quelles études se lancer pour pouvoir à la fois posséder des bases solides mais aussi passer rapidement à la pratique. Et bien, il semble avoir une réponse à cette question ... </p>
                 <div class="summary-bloc">
                     <h3>Sommaire</h3>
                     <ol>
@@ -60,17 +60,15 @@
                     <div class="post-it">
                         <img src="assets/icon/pin-it.svg" alt="" class="icon pin-it">
                         <div class="bloc-1">
-                            <h3>Bac STMG</h3>
-                            <p>Sep.2021 - Jul 2023</p>
+                            <h3></h3>
+                            <p></p>
                         </div>
                         <div class="bloc-2">
                             <ul>
-                                <li>Découverte du monde de l'entreprise</li>
-                                <li>Management des organisations, économie et droit</li>
-                                <li>Introduction à l'informatique: découverte de HTML, CSS, SQL ...</li>
+                            
                             </ul>
                         </div>
-                        <div class="cta-2-blue">Bac Mention Très Bien</div>
+                        <div class="cta-2-blue"></div>
                     </div>
                     <img src="assets/icon/thin_arrow_circle.svg" alt="" class="btn-arrow-right">
                     <div class="two-btn">
@@ -82,18 +80,17 @@
 
             <section id="le-bts-sio" class="classical-bloc">
                 <h2 class="blue-title">Le <span>BTS SIO</span></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore maxime, deleniti distinctio unde dolores omnis iste. Illo atque fuga, eaque, et nulla sit saepe ullam ea, est esse quod iusto.</p>
+                <p></p>
             </section>
 
             <section id="ses-objectifs" class="classical-bloc">
                 <h2 class="blue-title">Ses <span>objectifs</span></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore maxime, deleniti distinctio unde dolores omnis iste. Illo atque fuga, eaque, et nulla sit saepe ullam ea, est esse quod iusto.</p>
+                <p></p>
             </section>
 
             <section id="prerequis" class="classical-bloc">
                 <h2 class="blue-title">Quels sont les <span>prérequis</span> ?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore maxime, deleniti distinctio unde dolores omnis iste. Illo atque fuga, eaque, et nulla sit saepe ullam ea, est esse quod iusto.</p>
-
+                <p></p>
             </section>
 
             <section>
@@ -105,8 +102,8 @@
             <section id="sisr" class="classical-bloc img">
                 <h2 class="blue-title"><span>SISR</span></h2>
                 <div>
-                    <img src="" alt="" class="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore maxime, deleniti distinctio unde dolores omnis iste. Illo atque fuga, eaque, et nulla sit saepe ullam ea, est esse quod iusto.</p>    
+                    <img src="assets/img/sisr.jpg" alt="" class="">
+                    <p></p>
                 </div>
                </div>
             </section>
@@ -114,9 +111,8 @@
             <section id="slam" class="classical-bloc img">
                 <h2 class="blue-title"><span>SLAM</span></h2>
                 <div>
-                    <img src="" alt="" class="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore maxime, deleniti distinctio unde dolores omnis iste. Illo atque fuga, eaque, et nulla sit saepe ullam ea, est esse quod iusto.</p>
-    
+                    <img src="assets/img/slam.jpg" alt="" class="">
+                   <p></p>
                 </div>
                 
             </section>
@@ -150,19 +146,126 @@
             </footer>
             
         </main>
+<script>
+var parcoursArray = {};
 
-        
-       <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-       <script>
-        let typed =  new Typed ('.auto-typing',{
-            strings: ['étudiante en BTS SIO.', 'développeuse juniore.', 'motivée .'],
-            typeSpeed: 100,
-            backSpeed: 100,
-            loop: true,
-            fadeOut: true,
-            fadeOutClass: 'type-fade-out',
-            fadeOutDelay: 500,
-        });
-       </script>
+// STMG
+parcoursArray["stmg"] = {
+    title: "Bac STMG Option SIG",
+    date: "Sep.2021 - Jul 2023",
+    liste: `
+        <li>Découverte du monde de l'entreprise</li>
+        <li>Management des organisations, économie et droit</li>
+        <li>Introduction à l'informatique: découverte de HTML, CSS, SQL ...</li>
+    `,
+    diplome: "Bac Mention Très Bien"
+};
+
+// SIO
+parcoursArray["sio"] = {
+    title: "BTS SIO Option SLAM",
+    date: "Sep.2023 - Maintenant",
+    liste: `
+    <li>Assistance et support technique aux utilisateurs</li>
+    <li>Protection et sécurisation des données et des systèmes</li>
+    <li>Développement et maintenance d'applications</li>
+    <li>Création de sites web et d'applications mobiles</li>
+    <li>Analyse et exploitation des données</li>
+    <li>Gestion et optimisation des bases de données</li>
+    <li>Utilisation de systèmes de gestion de version (comme Git)</li>
+    <li>Communication et collaboration en équipe</li>
+    <li>Veille technologique et adaptation aux nouvelles technologies</li>
+    <li>Gestion de projets informatiques</li>
+    `,
+    diplome: "Préparation en cours"
+};
+
+var parcoursSio= {
+    def:`Cette formation de 2 ans, est disponible dans près de 130 établissements publics en France, et allie à la fois théorie et pratique. Il y en a pour tout les goûts, puisqu’on y aborde les systèmes et les réseaux (Wi-fi, routeurs, composants de l’ordinateur) mais aussi le développement (conception de sites internet, d’applications, découverte de langages tels que Php, Java, C#, HTML, CSS ...). 
+    De plus, il se révèle très professionnalisant, avec 4 semaines de stage en 1ère année et 8 semaines en 2ème année, mais aussi une multitude de projets pratiques tout au long de la formation.`,
+    objectifs: `<h4>Acquérir des compétences techniques :</h4>
+    <p>Développer des aptitudes en programmation, en administration de base de données, en gestion de réseaux et en cybersécurité.</p><br>
+    <h4>Préparer à l’insertion professionnelle :</h4>
+    <p>À la sortie du BTS SIO, il est possible de se rendre directement sur le marché du travail. Des entreprises numériques, des sociétés de conseil en technologies, des éditeurs de logiciels, ou encore les services informatiques internes des entreprises ou administrations publiques peuvent être intéressants.</p><br>
+    <h4>Favoriser la poursuite d’études :</h4>
+    <p>Les titulaires du BTS SIO peuvent poursuivre aussi en licence professionnelle, en école d’ingénieurs ou en master dans le domaine de l’informatique.</p><br>
+    `,
+    prerequis: "Pour intégrer le BTS SIO, il faut être titulaire d'un baccalauréat. La majorité des effectifs sont issus de bac pro (SN par exemple), d'autres de STMG et quelques uns de général. Certains se sont ré-orientés. Beaucoups d'éléments sont repris dès le début. Le plus important est de cultiver de l'intérêt pour l'informatique.",
+    sisr:" Cette option se concentre sur le développement et la maintenance des applications logicielles. Les étudiants apprennent à concevoir, développer et tester des logiciels, ainsi qu’à rédiger des cahiers des charges et à gérer des projets de développement.",
+    slam:"Cette option forme les étudiants à la gestion et à la maintenance des infrastructures réseaux et systèmes informatiques. Les compétences acquises incluent l’installation, la configuration, la sécurisation et la gestion des réseaux et des systèmes informatiques."
+};
+
+var parcoursSioDiv={
+    def:document.querySelector("#le-bts-sio p"),
+    objectifs:document.querySelector("#ses-objectifs p"),
+    prerequis:document.querySelector("#prerequis p"),
+    sisr:document.querySelector("#sisr p"),
+    slam:document.querySelector("#slam p")
+
+};
+
+parcoursSioDiv.def.textContent = parcoursSio.def;
+parcoursSioDiv.objectifs.innerHTML = parcoursSio.objectifs;
+parcoursSioDiv.prerequis.textContent = parcoursSio.prerequis;
+parcoursSioDiv.sisr.textContent = parcoursSio.sisr;
+parcoursSioDiv.slam.textContent = parcoursSio.slam;
+
+
+
+
+// Les variables du document
+var parcoursDiv = {
+    title: document.querySelector(".post-it .bloc-1 h3"),
+    date: document.querySelector(".post-it .bloc-1 p"),
+    liste: document.querySelector(".post-it .bloc-2 ul"),
+    diplome: document.querySelector(".post-it .cta-2-blue"),
+    btnRight: document.querySelectorAll(".slide-parcours .btn-arrow-right"),
+    btnLeft: document.querySelectorAll(".slide-parcours .btn-arrow-left")
+};
+
+
+
+var iP = 0;
+var keys = Object.keys(parcoursArray);
+
+// Initialisation des valeurs
+parcoursDiv.title.textContent = parcoursArray[keys[iP]].title;
+parcoursDiv.date.textContent = parcoursArray[keys[iP]].date;
+parcoursDiv.liste.innerHTML = parcoursArray[keys[iP]].liste;
+parcoursDiv.diplome.textContent = parcoursArray[keys[iP]].diplome;
+
+document.addEventListener("DOMContentLoaded",()=>{
+    
+    parcoursDiv.btnRight.forEach(btn=>{
+        btn.addEventListener("click", () => {
+        if (iP < keys.length - 1) {
+        iP++;
+        parcoursDiv.title.textContent = parcoursArray[keys[iP]].title;
+        parcoursDiv.date.textContent = parcoursArray[keys[iP]].date;
+        parcoursDiv.liste.innerHTML = parcoursArray[keys[iP]].liste;
+        parcoursDiv.diplome.textContent = parcoursArray[keys[iP]].diplome;
+    }
+    })
+    
+   
+});
+
+parcoursDiv.btnLeft.forEach(btn=>{
+    btn.addEventListener("click", () => {
+    if (iP > 0) {
+        iP--;
+        parcoursDiv.title.textContent = parcoursArray[keys[iP]].title;
+        parcoursDiv.date.textContent = parcoursArray[keys[iP]].date;
+        parcoursDiv.liste.innerHTML = parcoursArray[keys[iP]].liste;
+        parcoursDiv.diplome.textContent = parcoursArray[keys[iP]].diplome;
+    }
+    });
+})
+
+    
+})
+
+
+</script>
     </body>
 </html>

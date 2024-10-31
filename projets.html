@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <meta http-equiv="X-UA-compatible" content="IE-edge">
         <link rel="icon" type="image/png" href="logo.png">
         <link rel="stylesheet" href="style.css"/>
@@ -55,27 +54,7 @@
             <section id="projets-perso">
                 <h2 class="blue-title"><span>Ateliers professionnels</span></h2>
                 <div>
-                    <div class="proj">
-                        <div class="galerie-bloc"></div>
-                        <div class="descr-bloc">
-                            <h2 class="blue-title">Patron de conception <span>MVC</span></h2>
-                            <ul>
-                                <li>Apport de modification pour comprendre le fonctionnment du pattern MVC</li>
-                                <li>Apport de fonctionnalités : inscription, ajouter un j'aime, récupérer les commentaires des utilisateurs sous les restaurants</li>
-                                <li>Initation au PDO</li>
-                            </ul>
-                        </div>
-                        <div class="comp-btn-box">
-                            <div class="comp-btn">HTML</div>
-                            <div class="comp-btn">CSS</div>
-                            <div class="comp-btn">PHP</div>
-                            <div class="comp-btn">SQL</div>
-                        </div>
-    
-                        <hr>
-                        
-                        <a href="" class="cta-3-arrow"><img src="assets/icon/arrow-1.svg" alt="">Voir sur Github <i class="fa-brands fa-github"></i></a>
-                    </div>
+
                 </div>
 
                
@@ -154,19 +133,37 @@
             </div>
 
         </footer>
-        
-        
-       <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script src="script/config.js" ></script>
+    
        <script>
-        let typed =  new Typed ('.auto-typing',{
-            strings: ['étudiante en BTS SIO.', 'développeuse juniore.', 'motivée .'],
-            typeSpeed: 100,
-            backSpeed: 100,
-            loop: true,
-            fadeOut: true,
-            fadeOutClass: 'type-fade-out',
-            fadeOutDelay: 500,
+
+        
+var projetDiv = document.querySelector("#projets-perso>div");
+        projets.forEach(element => {
+            var newDiv = document.createElement("div");
+            newDiv.innerHTML = `<div class="proj">
+                        <img src="${element.photos}" alt=""class="galerie-bloc">
+                        <div class="descr-bloc">
+                            <h2 class="blue-title">${element.titre}</h2>
+                            <p>${element.descr}</p>
+                        </div>
+                        <div class="comp-btn-box">
+                            ${element.competences}
+                        </div>
+    
+                        <hr>
+                        
+                        <a href="${element.lien}" class="cta-3-arrow">
+                            <img src="assets/icon/arrow-1.svg" alt="">
+                            ${element.lien.includes("github")?`Voir sur Github<i class="fa-brands fa-github"></i>`:`Voir sur Jimdo<i class="fa-solid fa-j"></i>`}
+                            
+                            </a>
+                    </div>`;
+            projetDiv.appendChild(newDiv);
+            
         });
+
+
        </script>
     </body>
 </html>

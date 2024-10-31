@@ -69,7 +69,7 @@ p, li,label{
 body{
     display:flex;
     flex-direction: column;
-    width:100%;
+    overflow-x: hidden;
 }
 
 main{
@@ -84,12 +84,13 @@ main{
 
 section:not(.home-bloc-1){
     padding:2rem 2rem;
+    overflow:hidden;
     display:flex;
     flex-direction: column;
 
 }
 
-section:not(.home-bloc-1)>*{
+section:not(.home-bloc-1)>*:not(.cta-2-blue,.slide-parcours){
     margin:1rem;
 }
 
@@ -170,9 +171,9 @@ nav .fa-brands.fa-twitter{
 .home-bloc-1 h1{
     color:#71a0ff;
     font-weight: 800;
-    width:20rem;
+    width:18rem;
     text-shadow: 5px 3px 3px black;
-    padding: 5rem;
+    padding: 3rem;
 
 }
 
@@ -325,11 +326,13 @@ nav .fa-brands.fa-twitter{
     scale:-1;
     width:2.5rem;
     height:2.5rem;
+    cursor: pointer;
 }
 
  .btn-arrow-right{
     width:2.5rem;
     height:2.5rem;
+    cursor: pointer;
 }
 
 .two-btn{
@@ -337,10 +340,13 @@ nav .fa-brands.fa-twitter{
 }
 
 .proj-slide .galerie img.proj-img{
-    width:15.3rem;
-    height:20.4rem;
+    width:9.3rem;
+    height:13.4rem;
+    overflow:hidden;
     background: rgba(255,255,255,0.4);
     margin:1rem;
+    object-fit: cover;
+    object-position: left;
 }
 
 .proj-slide .proj-slide-descr{
@@ -354,6 +360,7 @@ nav .fa-brands.fa-twitter{
 
 .comp-btn-box{
     display:flex;
+    justify-content: center;
     margin:auto;
 }
 
@@ -409,7 +416,7 @@ nav .fa-brands.fa-twitter{
     width:18.75rem;
     height:2.3rem;
     padding:1.5rem 0.5rem;
-    margin:auto;
+    margin:1rem auto;
     background-color: var(--blue);
     border-radius:10rem;
     color:white;
@@ -483,6 +490,7 @@ footer{
     padding:2rem;
     justify-content: space-around;
     align-items: center;
+    width:100%;
 }
 
 footer div{
@@ -544,7 +552,7 @@ footer div a{
 }
 
 .slide-parcours .post-it{
-    height:27.8rem;
+    min-height:27.8rem;
     width:27.8rem;
     background-color:var(--light-purple);
     border-radius: 2rem;
@@ -563,8 +571,9 @@ footer div a{
     background-color: white;
     border-radius:0.7rem;
     width: 23.8rem;
-    height:10.6rem;
+    min-height:10.6rem;
     padding:2rem;
+    margin:1rem;
 }
 
 .classical-bloc>*:not(.blue-title){
@@ -584,6 +593,7 @@ footer div a{
     width:20rem;
     height:22rem;
     background-color: #C7DAFE;
+    object-fit: cover;
 }
 
 .cta-3-arrow{
@@ -606,6 +616,9 @@ footer div a{
     flex-wrap: wrap;
     justify-content: center;
 }
+#projets-perso>div>div{
+    margin:2rem;
+}
 
 #projets-perso .proj{
     width: 27rem;
@@ -619,8 +632,7 @@ footer div a{
     
 }
 
-#projets-perso .proj .descr-bloc ul{
-    font-size:0.75rem;
+#projets-perso .proj .descr-bloc ul,#projets-perso .proj .descr-bloc p{
     margin:0rem 2rem;
 }
 
@@ -631,7 +643,10 @@ footer div a{
 #projets-perso .proj .galerie-bloc {
     width:95%;
     height:13rem;
-    background-color: #92A6CE;
+    background-color: transparent;
+    box-shadow:var(--shadow);
+    object-fit: cover;
+    object-position: top left;
 }
 
 #stages{
@@ -642,7 +657,7 @@ footer div a{
 }
 
 #stages>div{
-    width:21.4rem;
+    width:20rem;
     margin: auto;
 }
 
@@ -786,6 +801,10 @@ footer div a{
     nav ul{
         display:none;
     }
+
+    .home-bloc-1 .objets{
+        height: 17rem;
+    }
     
     :root{
         --font-size-big-title: 2.5rem;
@@ -810,9 +829,7 @@ footer div a{
         padding:1.5rem 0rem;
     }
 
-    .slide-parcours{
-        flex-direction: column;
-    }
+   
 
     .slide-parcours .post-it{
         width: fit-content;
@@ -859,8 +876,9 @@ footer div a{
 
     .slide-parcours{
         position:relative;
-        right:1.25rem;
+        right: 1.65rem;
         margin: auto;
+        flex-direction: column;
     }
 
     .slide-parcours>.btn-arrow-left, .slide-parcours>.btn-arrow-right, #stages .slide-photo>.btn-arrow-left, #stages .slide-photo>.btn-arrow-right{
