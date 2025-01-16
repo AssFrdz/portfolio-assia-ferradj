@@ -9,6 +9,8 @@
         <link rel="icon" type="image/png+xml" href="assets/logo/logo-black.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="script/script.js" defer></script>
+        <script src="script/config.js" defer></script>
+
         <title>Compétences</title>
     </head>
     <body>
@@ -36,27 +38,24 @@
             </ul>
             </nav>
         </header>
-        <main>
+        <main id="competence">
 
             <section class="som-bloc">
                 <h1 class="blue-title"><span>Compétences</span></h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus laborum vitae nobis, ducimus minima fuga quo eveniet facilis qui veniam repellat itaque mollitia. Veritatis, aliquam expedita. Omnis explicabo eos id.</p>
+                <p>Ci-dessous sont recensées les compétences que j'ai acquises, pendant et en dehors de mon parcours académique.</p>
                 <div class="summary-bloc">
                     <h3>Sommaire</h3>
                     <ol>
-                        <li><a href="#">Parcours</a></li>
-                        <li><a href="#">Le BTS SIO</a></li>
-                        <li><a href="#">Ses objectifs</a></li>
-                        <li><a href="#">Prérequis</a></li>
-                        <li><a href="#">SLAM</a></li>
-                        <li><a href="#">SISR</a></li>
+                        <li><a href="#Systèmes">Systèmes et réseaux</a></li>
+                        <li><a href="#Langages">Langages</a></li>
+                        <li><a href="#Logiciels">Logiciels</a></li>
+                        <li><a href="#Langues">Langues</a></li>
                     </ol>
                 </div>
             </section>
         
-            <section id="competences">
-                
-            </section>
+           
+            
             
 
 
@@ -86,18 +85,167 @@
             </div>
 
         </footer>
+        <script>
+            document.querySelectorAll('.summary-bloc a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    const offset = window.innerHeight / 2 - target.offsetHeight / 2;
+                    window.scrollTo({
+                        top: target.offsetTop - offset,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
         
-       <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
        <script>
-        let typed =  new Typed ('.auto-typing',{
-            strings: ['étudiante en BTS SIO.', 'développeuse juniore.', 'motivée .'],
-            typeSpeed: 100,
-            backSpeed: 100,
-            loop: true,
-            fadeOut: true,
-            fadeOutClass: 'type-fade-out',
-            fadeOutDelay: 500,
-        });
+
+class Competence{
+    nom;
+    img;
+    
+
+    constructor(nom,img){
+        this.nom = nom;
+        this.img =  "assets/icon/"+ img;
+    }
+
+
+}
+
+class Basic extends Competence{
+
+
+
+constructor(nom,img,nbrEtoiles){
+    super(nom,img);
+    this.nbrEtoiles =nbrEtoiles;
+
+}
+
+
+}
+
+class Langue extends Competence{
+  
+    constructor(nom,img,descr){
+        super(nom,img);
+        this.descr = descr;
+
+    }
+}
+
+var competences = [];
+
+competences["titre"]=[
+"Systèmes",
+    "Langages",
+    "Logiciels",
+    "Langues"
+];
+    
+
+
+competences["Systèmes"]=[
+new Basic("Windows","windows.svg",4),
+new Basic("Linux","linux.svg",2),
+new Basic("Mac Os","mac.svg",3)
+];
+competences["Langages"]=[
+new Basic("csharp","csharp.svg",3),
+new Basic("php","php.svg",3),
+new Basic("html","html.svg",4),
+new Basic("css","css.svg",4),
+new Basic("javascript","js.svg",3),
+new Basic("python","py.svg",2),
+new Basic("sql","sql.svg",3)];
+
+competences["Logiciels"]=[
+new Basic("Trello","trello.svg",1),
+new Basic("Visual Studio Code","vscode.svg",4),
+new Basic("Visual Studio","vs.svg",2),
+new Basic("Figma","figma.svg",2),
+new Basic("Github","github.svg",3),
+new Basic("Filmora","wondershare.png",4)];
+
+competences["Langues"]=[
+new Langue("Anglais","anglais.jpg","Lu, Ecrit, Parlé"),
+new Langue("Français","français.jpg","Lu, Ecrit, Parlé"),
+new Langue("Espagnol","espagnol.jpg","Lu, Ecrit, Parlé"),
+new Langue("Arabe","arabic.jpg","Lu")
+
+];
+
+for(i=0;i<competences["titre"].length;i++) {
+        var main = document.querySelector("main");
+        var section = document.createElement("section");
+        section.setAttribute('id',competences["titre"][i]);
+        var h2 = document.createElement("h2");
+        h2.classList.add("blue-title");
+        var span = document.createElement("span");
+        var div = document.createElement("div");
+        
+        span.textContent=competences["titre"][i];
+        main.appendChild(section);
+        section.appendChild(h2);
+        h2.appendChild(span);
+        section.appendChild(div);
+
+        for(j=0;j<competences[competences["titre"][i]].length;j++){
+            var sousDiv = document.createElement("div");
+            div.appendChild(sousDiv);
+
+            var sousDiv1 = document.createElement("div");
+            sousDiv1.classList.add("competence");
+            sousDiv.appendChild(sousDiv1);
+
+            var subtitle = document.createElement("h4");
+            subtitle.textContent =  competences[competences["titre"][i]][j].nom;
+            subtitle.style.textAlign = "center";
+            subtitle.style.textTransform = "capitalize";
+
+            sousDiv.appendChild(subtitle);
+
+
+            var sousDiv2 = document.createElement("div");
+            sousDiv2.classList.add("etoile");
+            sousDiv.appendChild(sousDiv2);
+
+            var nbrEtoiles = competences[competences["titre"][i]][j].nbrEtoiles;
+            
+            for(l=0;l<nbrEtoiles;l++){
+                var etoile = document.createElement("img");
+                etoile.src = "assets/icon/star.svg";
+                etoile.classList.add("icon","svg");
+                sousDiv2.appendChild(etoile);
+            }
+
+            var img = document.createElement("img");
+            img.src = competences[competences["titre"][i]][j].img;
+            sousDiv1.appendChild(img);
+
+            if(competences[competences["titre"][i]][j] instanceof Langue){
+                var subtitle2 = document.createElement("p");
+                subtitle2.textContent =  competences[competences["titre"][i]][j].descr;
+                subtitle2.style.textAlign = "center";
+                subtitle2.style.textTransform = "capitalize";
+                sousDiv.appendChild(subtitle2);
+
+            }
+
+            
+        }
+
+        
+
+};
+
+
+
+
+
+
        </script>
     </body>
 </html>

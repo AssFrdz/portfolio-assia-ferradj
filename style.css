@@ -69,7 +69,7 @@ p, li,label{
 body{
     display:flex;
     flex-direction: column;
-    overflow-x: hidden;
+    width:100%;
 }
 
 main{
@@ -252,6 +252,10 @@ nav .fa-brands.fa-twitter{
     margin:auto;
 }
 
+.circle>*{
+    animation: clic 2s ease-in-out;
+}
+
 .circle .c1{
     height:7.5rem;
     width:7.5rem;
@@ -260,6 +264,7 @@ nav .fa-brands.fa-twitter{
     display:flex;
     margin:auto;
     box-shadow:2px 2px 10px rgba(11,11,11,0.5);
+    animation-delay: 4s;
 }
 
 .circle .c2{
@@ -270,6 +275,8 @@ nav .fa-brands.fa-twitter{
     display:flex;
     margin:auto;
     box-shadow:2px 2px 10px rgba(11,11,11,0.5);
+    animation-delay: 3s;
+
 }
 .circle .c3{
     height:3.75rem;
@@ -279,6 +286,8 @@ nav .fa-brands.fa-twitter{
     box-shadow:2px 2px 10px rgba(11,11,11,0.5);
     display:flex;
     margin:auto;
+    animation-delay: 2s;
+
 }
 .circle .c4{
     height:2.5rem;
@@ -288,6 +297,8 @@ nav .fa-brands.fa-twitter{
     box-shadow:2px 2px 10px rgba(11,11,11,0.5);
     display:flex;
     margin:auto;
+    animation-delay: 1s;
+
 }
 
 .circle .c5{
@@ -340,7 +351,7 @@ nav .fa-brands.fa-twitter{
 }
 
 .proj-slide .galerie img.proj-img{
-    width:9.3rem;
+    width:13.4rem;
     height:13.4rem;
     overflow:hidden;
     background: rgba(255,255,255,0.4);
@@ -393,6 +404,11 @@ nav .fa-brands.fa-twitter{
    color:black;
 }
 
+.cta-1-triangular:hover{
+    transform:scale(1.02);
+    transition:all 0.5s;
+ }
+
 .comp-bloc{
     display:flex;
     flex-wrap: wrap;
@@ -427,6 +443,10 @@ nav .fa-brands.fa-twitter{
     justify-content: center;
 }
 
+.cta-2-blue:hover{
+    animation: gauchedroite 0.5s infinite ease-in;
+}
+
 .home-bloc-3 #home-plan{
     display:flex;
     flex-wrap:wrap;
@@ -444,6 +464,22 @@ nav .fa-brands.fa-twitter{
     font-weight:var(--font-weight-bold);
     
 }
+
+.home-bloc-3 #home-plan div div:hover{
+    transform:scale(1.03);
+    transition:all 0.5s;
+    box-shadow: 1px 1px 10px white;
+    background-color: white;
+    border:1px solid var(--blue);
+
+}
+.home-bloc-3 #home-plan div:hover{
+    color:var(--blue);
+}
+.home-bloc-3 #home-plan div div:hover .icon{
+    filter: invert(45%) sepia(56%) saturate(5143%) hue-rotate(224deg) brightness(97%) contrast(94%);
+}
+
 
 .home-bloc-3 #home-plan div div {
     background-color: var(--blue);
@@ -606,8 +642,9 @@ footer div a{
 }
 
 .cta-3-arrow:hover{
-    position:relative;
-    left:2rem;
+    transform: translateX(1rem) scale(1.1);
+    transition: all 0.7s;
+
 }
 
 #projets-perso>div{
@@ -621,8 +658,16 @@ footer div a{
 }
 
 #projets-perso .proj{
-    width: 27rem;
+    width: 30rem;
     height:fit-content;
+}
+
+#projets-perso>div>div:hover .proj, #projets-perso>div>div:hover .blue-title span {
+    color:white;
+    background-color: var(--blue);
+    padding:0.2rem;
+    transform: scale(1.1);
+    transition: all 0.9s;
 }
 
 #projets-perso .proj .descr-bloc{
@@ -657,12 +702,33 @@ footer div a{
 }
 
 #stages>div{
-    width:20rem;
+    width:35rem;
     margin: auto;
+    box-shadow: var(--shadow);
+    padding:2rem;
+    border-radius:2rem;
+    
+}
+
+#stages>div:hover{
+    background-color: var(--blue);
+    color:white;
+    transition:all 0.5s;
+    
+}
+
+#stages>div:hover h3 span, #stages>div:hover .date-lieu span:nth-child(2),#stages>div:hover .date-lieu span{
+    color:white;
+    
 }
 
 #stages>div>*{
     margin:1rem;
+}
+
+#stages .stage h3{
+    justify-self: center;
+
 }
 
 #stages .stage .date-lieu{
@@ -706,9 +772,8 @@ footer div a{
 }
 
 #stages .stage .galerie-photo .slide-photo .photo{
-    width:10rem;
-    height:13rem;
-    background-color: #C7DAFE;
+    width:25rem;
+    height:15rem;
     margin:auto;
 }
 
@@ -754,6 +819,130 @@ footer div a{
 
 #cv .cta-2-blue{
     margin-top:3rem;
+}
+
+.competence{
+    width: 15rem;
+    height:fit-content;
+    
+}
+
+#competence section>div>div:not(.summary-bloc):hover, #competence section>div>div:not(.summary-bloc):hover{
+    background-color: var(--blue);
+    color:white;
+    transform:scale(1.05);
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    box-shadow:var(--shadow);
+}
+
+#competence section>div>div:not(.summary-bloc):hover .etoile .svg{
+    filter: invert(100%) sepia(100%) saturate(0%) brightness(1000%) contrast(100%);
+}
+
+.competence>*{
+    margin:1rem;
+}
+.competence img{
+    width:8rem;
+    height:8rem;
+    
+}
+
+#competence section>div:not(.summary-bloc){
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+#competence section>div>div:not(.summary-bloc){
+    margin:2rem;
+    padding:1rem;
+    border-radius:2rem;
+    box-shadow: var(--shadow);
+}
+
+
+#competence section div .competence,#competence section div .etoile{
+    display:flex;
+    flex-direction: wrap;
+    justify-content: center;
+}
+
+
+
+
+.galerie-perso{
+    display:flex;
+    margin:auto;
+    overflow:hidden;
+    height:37rem;
+    padding:2rem;
+    border-radius:0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.galerie-perso div{
+    display:flex;
+    flex-direction: column;
+    padding:auto;
+    transform: translateY(-5px);
+    animation:defiler 25s infinite ease-in-out;
+}
+
+.galerie-perso div img{
+    margin: 0.5rem;
+    width:20rem;
+    border-radius:0.5rem;
+
+
+}
+
+#title-hobby{
+    margin:auto;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.box-loisir{
+    background-color: blanchedalmond;
+    border-radius: 2rem;
+    margin:1rem;
+    box-shadow:1px 1px 10px rgb(197, 197, 197);
+    color:white;
+    display: flex;
+    justify-content: right;
+    padding:2rem;
+    align-items: end;
+    font-size:2rem;
+    font-weight: 900;
+    text-shadow: 1px 1px 5px rgb(197, 197, 197);
+}
+
+.box-loisir.sizeone{
+    height:5rem;
+}
+
+.box-loisir.sizetwo{
+    height:10rem;
+}
+
+.box-loisir.sizethree{
+    height:15rem;
+}
+
+.box-loisir.viol{
+    background-color: rgb(204, 158, 246);
+}
+
+.box-loisir.rose{
+    background-color: #f7a6eb;
+}
+.box-loisir.vert{
+    background-color: rgb(122, 174, 174);
 }
 
 @media screen and (max-width:930px) {
@@ -903,10 +1092,11 @@ footer div a{
 
     #contact form{
     width:80%;
+    }
+    
 }
 
-   
-}
+
 
 @keyframes cliquer{
     from{
@@ -917,8 +1107,40 @@ footer div a{
 
     }
 }
+@keyframes gauchedroite{
+    0%{
+        transform:translateX(-3px);
+    }
+    50%{
+        transform:translateX(3px);
 
+    }
+    100%{
+        transform:translateX(0px);
+
+    }
+}
 
 a:visited:not(nav a), a:active,a:not(nav a){
     text-decoration: none;
+}
+
+@keyframes clic{
+    0%{
+        transform:scale(0.5);
+    }50%{
+        transform:scale(1.2);
+    }100%{
+        transform:scale(1);
+    }
+}
+
+@keyframes defiler{
+    0%{
+        transform:translateY(0px);
+    }50%{
+        transform:translateY(-75rem);
+    }100%{
+        transform:translateY(0px);
+    }
 }
