@@ -352,12 +352,12 @@ nav .fa-brands.fa-twitter{
 
 .proj-slide .galerie img.proj-img{
     width:13.4rem;
-    height:13.4rem;
+    height:15.4rem;
     overflow:hidden;
-    background: rgba(255,255,255,0.4);
     margin:1rem;
-    object-fit: cover;
-    object-position: left;
+    object-fit: contain;
+    object-position: center;
+    margin:auto;
 }
 
 .proj-slide .proj-slide-descr{
@@ -628,7 +628,6 @@ footer div a{
 .classical-bloc img{
     width:20rem;
     height:22rem;
-    background-color: #C7DAFE;
     object-fit: cover;
 }
 
@@ -943,6 +942,29 @@ footer div a{
 }
 .box-loisir.vert{
     background-color: rgb(122, 174, 174);
+}
+/* points forts faibles tableau veille */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+}
+
+th {
+    background-color: #8d8fff;
+}
+
+tr:nth-child(even) {
+    background-color: #8d8fff56;
+}
+tr:hover {
+    background-color: #8d8fff;
 }
 
 @media screen and (max-width:930px) {
