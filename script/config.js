@@ -128,6 +128,3 @@ cheminPhotos+"immo"+extension,
 
 
 
-
-
-
