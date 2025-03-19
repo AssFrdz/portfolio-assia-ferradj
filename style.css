@@ -1133,7 +1133,12 @@ tr:hover {
     padding: 2rem;
     border-radius: 2rem;
 }
-    
+
+#projets-perso .proj .galerie-bloc {
+    object-fit: cover;
+    object-position: top center;
+}
+
 }
 
 
