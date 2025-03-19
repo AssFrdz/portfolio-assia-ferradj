@@ -1139,6 +1139,15 @@ tr:hover {
     object-position: top center;
 }
 
+#contact input[type="submit"] {
+    border: none;
+    text-align: center;
+    height: 3rem;
+    padding: 0rem;
+    margin: 1rem auto;
+    width:100%;
+}
+
 }
 
 
