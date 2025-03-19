@@ -1115,6 +1115,14 @@ tr:hover {
     #contact form{
     width:80%;
     }
+
+    #projets-perso>div>div {
+        margin:0rem;
+    }
+
+    #projets-perso .proj .descr-bloc ul, #projets-perso .proj .descr-bloc p {
+    margin: 0rem 1rem;
+    }
     
 }
 
