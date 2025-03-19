@@ -1123,6 +1123,16 @@ tr:hover {
     #projets-perso .proj .descr-bloc ul, #projets-perso .proj .descr-bloc p {
     margin: 0rem 1rem;
     }
+
+    
+}
+#stages>div {
+    width: 100%;
+    margin: auto;
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    border-radius: 2rem;
+}
     
 }
 
