@@ -1,3 +1,4 @@
+
 var pageActuelle = window.location.pathname;
 //menu
 if(pageActuelle.includes(".html")){
@@ -116,6 +117,7 @@ parcoursDiv.btnLeft.forEach(btn=>{
 
     
 })
+
 
 
     

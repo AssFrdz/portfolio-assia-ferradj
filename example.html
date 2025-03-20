@@ -3,50 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Points forts et faibles</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        
-    </style>
+    <title>Bouton switch</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+
+.tri{
+    width:fit-content;
+    height:fit-content;
+    border:2px solid blueviolet;
+    margin: 10rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.tri button{
+    background-color: transparent;
+    padding:0.5rem;
+    border-radius: 1rem;
+    border:none;
+    transition: all 0.2s ease-in;
+
+}
+
+.tri button:hover{
+    background-color:blueviolet;
+    color:white;
+    transition: all 0.2s ease-in;
+}
+</style>
 </head>
 <body>
-    <h1>Points forts et faibles</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Points forts</th>
-                <th>Points faibles</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Accessibilité</td>
-                <td>Personnalisation limitée</td>
-            </tr>
-            <tr>
-                <td>Rapidité</td>
-                <td>Problèmes de performance</td>
-            </tr>
-            <tr>
-                <td>Réduction des coûts</td>
-                <td>Dépendance à la plateforme</td>
-            </tr>
-            <tr>
-                <td>Flexibilité et adaptabilité</td>
-                <td>Sécurité et conformité</td>
-            </tr>
-            <tr>
-                <td>Innovation accrue</td>
-                <td>Limites techniques</td>
-            </tr>
-            <tr>
-                <td>Intégration facile</td>
-                <td>Non évolutivité</td>
-            </tr>
-        </tbody>
-    </table>
+
+
+<div class="tri">
+<button onclick="afficheproj('AP')">AP</button>
+<button onclick="afficheproj('PP')">Personnel</button>
+<button onclick="afficheproj('')">Tout</button>
+</div>
+   
+
+    <script>
+var btnAp = document.querySelector(".tri button:nth-child(1)");
+var btnPerso = document.querySelector(".tri button:nth-child(2)");
+var btnTout = document.querySelector(".tri button:nth-child(3)");
+
+
+    </script>
+    
+    
 </body>
 </html>

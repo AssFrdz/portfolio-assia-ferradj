@@ -23,6 +23,7 @@
                     <img src="assets/icon/bars.svg" alt="" class="phone-element" id="hamburger_button">
                     <a href="index.html"><img src="assets/logo/logo-black.png" alt="" id="logo-top"></a>
                     <a href="contact.html"><img src="assets/icon/mail.svg" alt=""></a>
+
                 </div>
             <ul>
                 <li><a href="index.html" class="underline">Accueil</a></li>
@@ -52,8 +53,16 @@
             </section>
 
             <section id="projets-perso">
+                
                 <h2 class="blue-title"><span>Projets</span></h2>
-                <div>
+                
+                <div class="tri">
+                    <button onclick="afficheproj('AP')">AP</button>
+                    <button onclick="afficheproj('PP')">Personnel</button>
+                    <button onclick="afficheproj('')">Tout</button>
+                </div>
+
+                <div class="ensemble">
 
                 </div>
 
@@ -124,17 +133,7 @@
                     </div>
                      
                     <div class="galerie-photo">
-                        <h4>Galerie photo :</h4>
-                        <div class="slide-photo">
-                            <img src="assets/icon/arrow-black.svg" alt="" class="btn-arrow-left">
-                            <img src="" alt="" class="photo">
-                            <img src="assets/icon/arrow-black.svg" alt="" class="btn-arrow-right">   
-                            <div class="two-btn">
-                                <img src="assets/icon/arrow-black.svg" alt="" class="btn-arrow-left">
-                                <img src="assets/icon/arrow-black.svg" alt="" class="btn-arrow-right">   
-                            </div>
-
-                        </div>
+                       
                     </div>
                     <h4>Remarque : </h4>
                 </div>
@@ -185,7 +184,7 @@
        <script>
 
         
-var projetDiv = document.querySelector("#projets-perso>div");
+var projetDiv = document.querySelector("#projets-perso>.ensemble");
         projets.forEach(element => {
             var newDiv = document.createElement("div");
             newDiv.innerHTML = `<div class="proj">
@@ -210,6 +209,127 @@ var projetDiv = document.querySelector("#projets-perso>div");
             
         });
 
+        function afficheproj(event){
+            while (projetDiv.firstChild) {
+                 projetDiv.removeChild(projetDiv.firstChild);
+            }
+            switch(event){
+                case "AP":
+                projets.forEach(element => {
+                    if(element.domaine=="AP"){
+                        var newDiv = document.createElement("div");
+            newDiv.innerHTML = `<div class="proj">
+                        <img src="${element.photos}" alt=""class="galerie-bloc">
+                        <div class="descr-bloc">
+                            <h2 class="blue-title">${element.titre}</h2>
+                            <p>${element.descr}</p>
+                        </div>
+                        <div class="comp-btn-box">
+                            ${element.competences}
+                        </div>
+    
+                        <hr>
+                        
+                        <a href="${element.lien}" class="cta-3-arrow">
+                            <img src="assets/icon/arrow-1.svg" alt="">
+                            ${element.lien.includes("github")?`Voir sur Github<i class="fa-brands fa-github"></i>`:`Voir sur Jimdo<i class="fa-solid fa-j"></i>`}
+                            
+                            </a>
+                    </div>`;
+                    
+            projetDiv.appendChild(newDiv);
+
+                    }
+            
+            
+        });
+
+                    break;
+
+                case "PP":
+                projets.forEach(element => {
+                    if(element.domaine=="PP"){
+                        var newDiv = document.createElement("div");
+            newDiv.innerHTML = `<div class="proj">
+                        <img src="${element.photos}" alt=""class="galerie-bloc">
+                        <div class="descr-bloc">
+                            <h2 class="blue-title">${element.titre}</h2>
+                            <p>${element.descr}</p>
+                        </div>
+                        <div class="comp-btn-box">
+                            ${element.competences}
+                        </div>
+    
+                        <hr>
+                        
+                        <a href="${element.lien}" class="cta-3-arrow">
+                            <img src="assets/icon/arrow-1.svg" alt="">
+                            ${element.lien.includes("github")?`Voir sur Github<i class="fa-brands fa-github"></i>`:`Voir sur Jimdo<i class="fa-solid fa-j"></i>`}
+                            
+                            </a>
+                    </div>`;
+                    
+            projetDiv.appendChild(newDiv);
+
+                    }});
+                
+
+                    break;
+
+                default:
+                projets.forEach(element => {
+            var newDiv = document.createElement("div");
+            newDiv.innerHTML = `<div class="proj">
+                        <img src="${element.photos}" alt=""class="galerie-bloc">
+                        <div class="descr-bloc">
+                            <h2 class="blue-title">${element.titre}</h2>
+                            <p>${element.descr}</p>
+                        </div>
+                        <div class="comp-btn-box">
+                            ${element.competences}
+                        </div>
+    
+                        <hr>
+                        
+                        <a href="${element.lien}" class="cta-3-arrow">
+                            <img src="assets/icon/arrow-1.svg" alt="">
+                            ${element.lien.includes("github")?`Voir sur Github<i class="fa-brands fa-github"></i>`:`Voir sur Jimdo<i class="fa-solid fa-j"></i>`}
+                            
+                            </a>
+                    </div>`;
+            projetDiv.appendChild(newDiv);
+            
+        });
+                    break;
+            }
+
+        }
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+    const galeriePhoto = document.querySelector(".galerie-photo");
+    const imagesGaleries = ["stage(1).png", "stage(2).png", "stage(3).png", "stage(4).png"];
+
+    let index = 0;
+
+
+    setInterval(() => {
+        // Change the background image
+        index = (index + 1) % imagesGaleries.length;
+        galeriePhoto.style.backgroundImage = `url('assets/img/${imagesGaleries[index]}')`;
+        galeriePhoto.style.backgroundPosition = "center";
+        galeriePhoto.style.backgroundSize = "contain";
+        galeriePhoto.style.transition = "background 0.5s ease-in";
+        console.log(`Image changed to: ${imagesGaleries[index]}`);
+    }, 3000); // Change image every 3 seconds
+});
+
+
+
+
+
+        
 
        </script>
     </body>
