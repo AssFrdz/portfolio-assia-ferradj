@@ -9,6 +9,62 @@
         <link rel="icon" type="image/png+xml" href="assets/logo/logo-black.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" >
         <script type="application/ld+json" src="script/breadcrumb.json"></script>
+        <style>
+            #rss-feed{
+            width:90%;
+            margin:1rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center ;
+        }
+
+        #rss-feed div{
+            width:25rem;
+            height: auto;
+            border-radius:2rem;
+            margin:1rem;
+            box-shadow: 2px 2px 10px grey;
+            padding:2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+
+        #rss-feed div .title{
+            font-size:1.5rem;
+            color:var(--blue);
+            font-weight: 800;
+        }
+
+        #rss-feed div p{
+            margin:1rem;
+        }
+
+        #rss-feed div p img{
+            width:2rem;
+            transform: scale(0.6);
+            overflow: hidden;
+        }
+
+        #rss-feed div a{
+            color:black;
+            text-align: right;
+        }
+
+        #rss-feed div a:hover{
+            text-decoration: underline;
+        }
+        
+        #rss-feed div a:hover::after{
+            content:"➡️";
+            display: inline-block;
+            position:relative;
+            left:3px;
+    
+        }
+        </style>
         <script src="script/script.js" defer></script>
         <title>Veille</title>
     </head>
@@ -174,8 +230,13 @@
             <section id="avenir" class="classical-bloc img">
                 <h2 class="blue-title"><span>Quelques articles connexes
                 </span></h2>
+
+                <div id="rss-feed"></div>
             
             </section>
+
+
+
 
             <footer>
                 <div class="plan-site">
@@ -203,6 +264,51 @@
     
             </footer>
             
-        </main>
+        </main> <script>
+            async function fetchRSS(){
+                const url = 'https://cors-anywhere.herokuapp.com/https://www.blogdumoderateur.com/feed/';
+                try{
+                    const response = await fetch(url);
+                    if(!response.ok){
+                        throw new Error('Network response is not ok');
+                    }
+                    const text = await response.text();
+                    console.log('RSS Feed :', text);
+            
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(text,'application/xml');
+                    const items = xmlDoc.getElementsByTagName('item');
+                    console.log("Items : ", items);
+            
+                    const rssFeedDiv = document.getElementById('rss-feed');
+                    for (let i = 0; i < 9; i++) {
+                        const item = items[i];
+                        const title = item.getElementsByTagName('title')[0].textContent;
+                        const link = item.getElementsByTagName('link')[0].textContent;
+                        let description = item.getElementsByTagName('description')[0].textContent;
+            
+                        // Supprimer les balises img de la description
+                        description = description.replace(/<img[^>]+>/g, '');
+            
+                        const articleDiv = document.createElement('div');
+                        articleDiv.innerHTML = `
+                            <span class="title">${title}</span>
+                            <p>${description}</p>
+                            <a href="${link}" target="_blank">Voir plus</a>
+                        `;
+            
+                            rssFeedDiv.appendChild(articleDiv);
+            
+            
+                    }
+                } catch(error){
+                    console.error("Erreur dans la récupération du feed RSS : ", error);
+                }
+            }
+            
+            fetchRSS();
+                </script>
+
+
     </body>
     </html>

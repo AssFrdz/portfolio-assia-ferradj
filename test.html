@@ -1,82 +1,72 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Interaction Rond et Div</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS feed</title>
     <style>
-        /* Style pour le rond */
-        .rond {
-            width: 50px;
-            height: 50px;
-            background-color: red;
-            border-radius: 50%;
-            position: absolute;
-            transition: transform 0.3s;
+       
+        #rss-feed{
+            width:90%;
+            margin:1rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
-        /* Style pour la div cible */
-        .cible {
-            width: 200px;
-            height: 100px;
-            background-color: lightgray;
-            color: black;
+        #rss-feed div{
+            width:25rem;
+            height: auto;
+            border-radius:2rem;
+            margin:1rem;
+            box-shadow: 2px 2px 10px grey;
+            padding:2rem;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s, color 0.3s;
-            position: relative;
-            top: 100px;
-            left: 100px;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+
+        #rss-feed div .title{
+            font-size:1.5rem;
+            color:blueviolet;
+            font-weight: 800;
+        }
+
+        #rss-feed div p{
+            margin:1rem;
+        }
+
+        #rss-feed div p img{
+            width:2rem;
+            transform: scale(0.6);
+            overflow: hidden;
+        }
+
+        #rss-feed div a{
+            color:black;
+            text-align: right;
+        }
+        #rss-feed div a:hover::before{
+            content:" ";
+            display: inline-block;
+            position:relative;
+            top: 0.15rem;
+            height:0.1rem;
+            width:2rem;
+            background-color: black;
+        }
+        #rss-feed div a:hover::after{
+            content:"➡️";
+            display: inline-block;
+            position:relative;
+            left:3px;
         }
     </style>
 </head>
 <body>
-    <div class="rond" id="rond"></div>
-    <div class="cible" id="cible">Texte de la div</div>
+    <div id="rss-feed"></div>
 
-    <script>
-        // Sélectionner les éléments
-        const rond = document.getElementById('rond');
-        const cible = document.getElementById('cible');
-
-        // Fonction pour vérifier la collision entre le rond et la div cible
-        function checkCollision() {
-            const rondRect = rond.getBoundingClientRect();
-            const cibleRect = cible.getBoundingClientRect();
-
-            // Vérifier si les rectangles se chevauchent
-            if (rondRect.left < cibleRect.right &&
-                rondRect.right > cibleRect.left &&
-                rondRect.top < cibleRect.bottom &&
-                rondRect.bottom > cibleRect.top) {
-                // Changer le style de la div cible lorsqu'il y a collision
-                cible.style.color = 'white';
-                cible.style.backgroundColor = 'purple';
-            } else {
-                // Réinitialiser le style de la div cible
-                cible.style.color = 'black';
-                cible.style.backgroundColor = 'lightgray';
-            }
-        }
-
-        // Déplacer le rond avec les touches fléchées
-        document.addEventListener('keydown', (event) => {
-            switch (event.key) {
-                case 'ArrowUp':
-                    rond.style.top = `${rond.offsetTop - 10}px`;
-                    break;
-                case 'ArrowDown':
-                    rond.style.top = `${rond.offsetTop + 10}px`;
-                    break;
-                case 'ArrowLeft':
-                    rond.style.left = `${rond.offsetLeft - 10}px`;
-                    break;
-                case 'ArrowRight':
-                    rond.style.left = `${rond.offsetLeft + 10}px`;
-                    break;
-            }
-            checkCollision();
-        });
-    </script>
+   
 </body>
 </html>
