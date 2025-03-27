@@ -309,19 +309,19 @@ var projetDiv = document.querySelector("#projets-perso>.ensemble");
 
         document.addEventListener("DOMContentLoaded", () => {
     const galeriePhoto = document.querySelector(".galerie-photo");
-    const imagesGaleries = ["stage(1).png", "stage(2).png", "stage(3).png", "stage(4).png"];
+    const imagesGaleries = ["stage(1).png", "stage(2).png", "stage(3).png", "stage(4).png","stage(5).png"];
 
     let index = 0;
 
 
     setInterval(() => {
-        // Change the background image
+        
         index = (index + 1) % imagesGaleries.length;
         galeriePhoto.style.backgroundImage = `url('assets/img/${imagesGaleries[index]}')`;
         galeriePhoto.style.backgroundPosition = "center";
         galeriePhoto.style.backgroundSize = "contain";
         galeriePhoto.style.transition = "background 0.5s ease-in";
-    }, 3000); // Change image every 3 seconds
+    }, 3000); 
 });
 
 

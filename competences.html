@@ -145,7 +145,8 @@ competences["titre"]=[
 "Systèmes",
     "Langages",
     "Logiciels",
-    "Langues"
+    "Langues",
+    "Certifications"
 ];
     
 
@@ -177,8 +178,15 @@ new Langue("Anglais","anglais.jpg","Lu, Ecrit, Parlé"),
 new Langue("Français","français.jpg","Lu, Ecrit, Parlé"),
 new Langue("Espagnol","espagnol.jpg","Lu, Ecrit, Parlé"),
 new Langue("Arabe","arabic.jpg","Lu")
-
 ];
+
+competences["Certifications"]=[
+new Basic("Pix","pix.jpg",4),
+new Basic("Implémentez vos bases de données relationnelles avec SQL","op.png",4),
+new Basic("Apprenez à programmer avec Javascript","op.png",3),
+new Basic("Passez au Full Stack avec Node.js, Express et MongoDB","op.png",3),
+new Basic("C# Intermediate","solo.png",4)];
+
 
 for(i=0;i<competences["titre"].length;i++) {
         var main = document.querySelector("main");

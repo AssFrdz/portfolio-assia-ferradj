@@ -119,6 +119,23 @@ cheminPhotos+"immo"+extension,
 "PP"
 ));
 
+projets.push(new Projet("Mission <span>Jeux Olympiques</span>",
+"Apports de modifications sur le site, ajout de la confirmation admin de suppression",
+cheminPhotos+"jo"+extension,
+`<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">PHP</div>`,
+"https://github.com/AssFrdz/Site-immobilier",
+"Fini",
+"AP"
+));
+projets.push(new Projet("Mission <span>Orange</span>",
+"Ajout de rôles, contraintes de mot de passe dans la création de compte",
+cheminPhotos+"orange"+extension,
+`<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">PHP</div>`,
+"https://github.com/AssFrdz/Site-immobilier",
+"Fini",
+"AP"
+));
+
 
 
 

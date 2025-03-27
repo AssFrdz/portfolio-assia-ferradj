@@ -932,6 +932,9 @@ footer div a{
     flex-direction: wrap;
     justify-content: center;
 }
+#competence section div .competence{
+    margin:auto;
+}
 
 
 
