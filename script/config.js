@@ -131,12 +131,54 @@ projets.push(new Projet("Mission <span>Orange</span>",
 "Ajout de rôles, contraintes de mot de passe dans la création de compte",
 cheminPhotos+"orange"+extension,
 `<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">PHP</div>`,
-"https://github.com/AssFrdz/Site-immobilier",
+"https://github.com/AssFrdz/orangeleger",
 "Fini",
 "AP"
 ));
+projets.push(new Projet("Liste de <span>voitures</span>",
+"Liste de voitures générées avec NodeJs",
+cheminPhotos+"cars"+extension,
+`<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">Node JS</div>`,
+"https://github.com/AssFrdz/voiture_nodejs",
+"Fini",
+"PP"
+));
 
+projets.push(new Projet("Code <span>OTP</span>",
+"Pour sécuriser une connexion, génération d'un code OTP",
+cheminPhotos+"otp"+extension,
+`<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">JS</div>`,
+"https://github.com/AssFrdz/codeotp",
+"Fini",
+"PP"
+));
 
+projets.push(new Projet("Tableau de  <span>bord</span>",
+"Un tableau de bord en HTML CSS",
+cheminPhotos+"dashboard"+extension,
+`<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div>`,
+"https://github.com/AssFrdz/dashboard",
+"Fini",
+"PP"
+));
+
+projets.push(new Projet("Tableau de  <span>bord</span>",
+"Un tableau de bord en HTML CSS",
+cheminPhotos+"dashboard"+extension,
+`<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div>`,
+"https://github.com/AssFrdz/voiture_nodejs",
+"Fini",
+"PP"
+));
+
+projets.push(new Projet("Site de  <span>ecommerce</span>",
+"Un site de pret à porter en ligne sur le pattern MVC",
+cheminPhotos+"dashboard"+extension,
+`<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">Php</div>`,
+"https://github.com/AssFrdz",
+"Fini",
+"PP"
+));
 
 
 
