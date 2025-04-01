@@ -46,7 +46,6 @@
                     <h3>Sommaire</h3>
                     <ol>
                         <li><a href="#projets">Projets</a></li>
-                        <li><a href="#epreuve-E5">Epreuve E5</a></li>
                         <li><a href="#stages">Stages</a></li>
                     </ol>
                 </div>
@@ -72,12 +71,12 @@
                 
             </section>
 
-            <section id="epreuve-E5">
-                <h2 class="blue-title"><span>Epreuve E5</span></h2>
-            </section>
+            
 
             <section id="stages">
                 <h2 class="blue-title"><span>Stages</span></h2>
+
+                
 
                 <div class="stage">
                     <h3 class="blue-title">Stage de <span>1ère année</span>
@@ -167,7 +166,9 @@
             </div>
 
         </footer>
+
         <script src="script/config.js" ></script>
+
         <script>
             document.querySelectorAll('.summary-bloc a').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
@@ -181,14 +182,16 @@
                 });
             });
         </script>
+
+
        <script>
 
         
-var projetDiv = document.querySelector("#projets-perso>.ensemble");
-        projets.forEach(element => {
-            var newDiv = document.createElement("div");
-            newDiv.innerHTML = `<div class="proj">
-                        <img src="${element.photos}" alt=""class="galerie-bloc">
+        var projetDiv = document.querySelector("#projets-perso>.ensemble");
+            projets.forEach(element => {
+                var newDiv = document.createElement("div");
+                newDiv.innerHTML = `<div class="proj">
+                        <img src="${element.photos}" alt="" class="galerie-bloc">
                         <div class="descr-bloc">
                             <h2 class="blue-title">${element.titre}</h2>
                             <p>${element.descr}</p>
@@ -205,8 +208,8 @@ var projetDiv = document.querySelector("#projets-perso>.ensemble");
                             
                             </a>
                     </div>`;
-            projetDiv.appendChild(newDiv);
-            
+                projetDiv.appendChild(newDiv);
+                
         });
 
         function afficheproj(event){

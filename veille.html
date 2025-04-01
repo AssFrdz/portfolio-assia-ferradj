@@ -251,7 +251,7 @@
                 <h2 class="blue-title"><span>Quelques articles connexes
                 </span></h2>
 
-                <button><a href="#" target="_blank">Pour des raisons de sécurité, ce flux ne peut être affiché.</a></button>
+                <button><a href="https://cors-anywhere.herokuapp.com/" target="_blank">Accepter les en-têtes CORS</a></button>
 
                 <div id="rss-feed"></div>
             
@@ -308,6 +308,9 @@
                         const title = item.getElementsByTagName('title')[0].textContent;
                         const link = item.getElementsByTagName('link')[0].textContent;
                         let description = item.getElementsByTagName('description')[0].textContent;
+                        let date = item.getElementsByTagName('pubDate')[0].textContent;
+
+                        
             
                         // Supprimer les balises img de la description
                         description = description.replace(/<img[^>]+>/g, '');
@@ -316,6 +319,7 @@
                         articleDiv.innerHTML = `
                             <span class="title">${title}</span>
                             <p>${description}</p>
+                            <span>${date}</span>
                             <a href="${link}" target="_blank">Voir plus</a>
                         `;
             
