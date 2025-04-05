@@ -43,7 +43,7 @@ projets.push(new Projet("Patron de conception <span>MVC</span> restaurant",
 "Apport de modification pour regarder comment fonctionne le pattern MVC , apport de fonctionnalités : inscription, ajouter un j'aime, récupérer les commentaires des utilisateurs sous les restaurants. Initation au PDO",
 cheminPhotos+"mvc"+extension,
 `<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">PHP</div><div class="comp-btn">SQL</div>`,
-"https://github.com/AssFrdz/1SIOA_MVC_NASRI_Sara_FERRADJ_Assia",
+"https://github.com/AssFrdz/1SIOA_MVC_FERRADJ_Assia",
 "Fini",
 "AP"
 ));
@@ -87,7 +87,7 @@ projets.push(new Projet("Calculatrice <span>JS</span>",
 "Suivi d'un tutoriel pour réaliser cette calculatrice simple",
 cheminPhotos+"calculette"+extension,
 `<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">JS</div>`,
-"https://github.com/AssFrdz/Calculette-html-css",
+"https://assfrdz.github.io/calculatrice/",
 "Fini",
 "PP"
 ));
@@ -123,7 +123,7 @@ projets.push(new Projet("Mission <span>Jeux Olympiques</span>",
 "Apports de modifications sur le site, ajout de la confirmation admin de suppression",
 cheminPhotos+"jo"+extension,
 `<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">PHP</div>`,
-"https://github.com/AssFrdz/Site-immobilier",
+"https://github.com/Djibril93270/JO-tourisme",
 "Fini",
 "AP"
 ));
@@ -148,7 +148,7 @@ projets.push(new Projet("Code <span>OTP</span>",
 "Pour sécuriser une connexion, génération d'un code OTP",
 cheminPhotos+"otp"+extension,
 `<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">JS</div>`,
-"https://github.com/AssFrdz/codeotp",
+"https://assfrdz.github.io/codeotp",
 "Fini",
 "PP"
 ));
@@ -157,23 +157,15 @@ projets.push(new Projet("Tableau de  <span>bord</span>",
 "Un tableau de bord en HTML CSS",
 cheminPhotos+"dashboard"+extension,
 `<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div>`,
-"https://github.com/AssFrdz/dashboard",
+"https://assfrdz.github.io/dashboard",
 "Fini",
 "PP"
 ));
 
-projets.push(new Projet("Tableau de  <span>bord</span>",
-"Un tableau de bord en HTML CSS",
-cheminPhotos+"dashboard"+extension,
-`<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div>`,
-"https://github.com/AssFrdz/voiture_nodejs",
-"Fini",
-"PP"
-));
 
 projets.push(new Projet("Site de  <span>ecommerce</span>",
 "Un site de pret à porter en ligne sur le pattern MVC",
-cheminPhotos+"dashboard"+extension,
+cheminPhotos+"sias"+extension,
 `<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">Php</div>`,
 "https://github.com/AssFrdz",
 "Fini",

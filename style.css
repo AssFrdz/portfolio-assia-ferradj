@@ -912,6 +912,10 @@ footer div a{
     
 }
 
+#Certifications .competence img{
+    object-fit: contain;
+}
+
 #competence section>div:not(.summary-bloc){
     display:flex;
     flex-wrap: wrap;
