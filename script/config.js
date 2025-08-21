@@ -172,6 +172,74 @@ cheminPhotos+"sias"+extension,
 "PP"
 ));
 
+projets.push(new Projet("Site <span>CV</span>",
+"Un site CV pour mettre en avant les compétences en archivage documentaire.",
+cheminPhotos+"site_cv"+extension,
+`<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">Taiwind</div>`,
+"https://assfrdz.github.io/cv_abdelkader",
+"Fini",
+"PP"
+));
+
+projets.push(new Projet("Site <span>Sia's Invitations</span>",
+"Un site vitrine pour une conceptrice de faire-parts animés.",
+cheminPhotos+"sias_invitations"+extension,
+`<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">JS</div>`,
+"https://assfrdz.github.io/sias.invitations",
+"Fini",
+"PP"
+));
+
+projets.push(new Projet("Concept <span>Snimple</span>",
+"Un outil pour conserver ses snippets de code et éviter de les rechercher en ouvrant d'autres projets.",
+cheminPhotos+"snimply"+extension,
+`<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">Node JS</div>`,
+"https://assfrdz.github.io/snimply",
+"Fini",
+"PP"
+));
+
+projets.push(new Projet("Application <span>CozyNotes</span>",
+"On peut écrire dans des carnets dans un univers mignon et simple.",
+cheminPhotos+"cozynotes"+extension,
+`<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn"> API Node JS</div><div class="comp-btn">React</div>`,
+"https://github.com/assfrdz/cozynotes",
+"Fini",
+"PP"
+));
+
+
+projets.push(new Projet("Roadmap pour devenir <span>développeur</span>",
+"Une roadmap avec des outils de to do liste, un minuteur, pour retranscrire son évolution en développement web",
+cheminPhotos+"roadmap_1"+extension,
+`<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">Angular</div>`,
+"https://github.com/assfrdz/roadmap",
+"Fini",
+"PP"
+));
+
+projets.push(new Projet("Garage <span>RBG</span>",
+"Un site vitrine pour le garage RBG avec possiblité de réserver des pièces et les visualiser.",
+cheminPhotos+"rbg_1"+extension,
+`<div class="comp-btn">HTML</div><div class="comp-btn">Tailwind CSS</div><div class="comp-btn">JS</div>`,
+"https://rbg-garage.github.io/rbg",
+"Fini",
+"PP"
+));
+
+projets.push(new Projet("Outil <span>Ciment.io</span>",
+"Un outil pour gérer les stocks en php.",
+cheminPhotos+"ciment_io"+extension,
+`<div class="comp-btn">HTML</div><div class="comp-btn">CSS</div><div class="comp-btn">Php</div>`,
+"https://assfrdz.github.io/sias.invitations",
+"Fini",
+"PP"
+));
+
+
+
+
+
 
 
 
